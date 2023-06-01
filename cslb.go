@@ -140,7 +140,6 @@ func newCslb() *cslb {
 	t.netDialer = &net.Dialer{ // Set up a net.Dialer identical to the
 		Timeout:   30 * time.Second, // way that net.http does.
 		KeepAlive: 30 * time.Second,
-		DualStack: true,
 		Resolver:  net.DefaultResolver,
 	}
 	t.systemDialContext = t.netDialer.DialContext
